@@ -1,0 +1,115 @@
+name: Agency-F
+version: 0.1.0
+description: "Agency-F is a fork of Agency - a clean and professional one-page theme for **Grav**, aimed at film makers and production companies."
+icon: film
+author:
+  name: Matthias Schneemann
+  email: matthias.schneemann@interactive-bread.com
+  url: https://interactive-bread.com
+homepage: https://github.com/InteractiveBread/grav-theme-agency-f
+keywords: agency, theme, onepage, modern, fast, responsive, html5, css3
+bugs: https://github.com/InteractiveBread/grav-theme-agency-f/issues
+license: MIT
+
+dependencies:
+  - { name: grav, version: '>=1.7.49.5' }
+
+form:
+  validation: loose
+  fields:
+    dropdown.enabled:
+        type: toggle
+        label: Dropdown in navbar
+        highlight: 1
+        default: 0
+        options:
+          1: Enabled
+          0: Disabled
+        validate:
+          type: bool
+
+    colors:
+        type: fieldset
+        title: Colors
+        help: Help Text
+        info: Info Text
+        icon: paint-brush
+        collapsed: false
+        collapsible: true
+        
+        fields:
+        
+            .primary:
+                type: colorpicker
+                size: medium
+                label: Primary
+                default: '#5190dd'
+                validate:
+                  type: text
+        
+            .accent:
+                type: colorpicker
+                size: medium
+                label: Accent
+                default: '#2f81e7'
+                validate:
+                  type: text
+    
+    icons:
+        type: fieldset
+        title: Icons
+        help: Help Text
+        info: Info Text
+        icon: user-circle
+        collapsed: false
+        collapsible: true
+        
+        fields:
+    
+            .navbar_logo:
+                type: filepicker
+                folder: theme://user-uploads/icons
+                label: Navbar Logo
+                preview_images: true
+                
+            .uploads:
+                type: file
+                label: Uploads
+                destination: theme://user-uploads/icons
+                multiple: true
+                accept: image/*
+    
+    opengraph:
+        type: fieldset
+        title: Open Graph
+        info: Meta Tags for Open Graph representation
+        collapsed: false
+        collapsible: true
+        
+        fields:
+    
+            .title:
+                type: text
+                label: OG Title
+            .type:
+                type: text
+                label: OG Type
+            .description:
+                type: text
+                label: OG Description
+            .url:
+                type: text
+                label: OG URL
+            .image:
+                type: filepicker
+                label: OG Image (1201x628)
+                folder: theme://user-uploads
+                preview_images: true
+    
+    user_uploads:
+        name: uploads
+        type: file
+        label: User Uploads (Images)
+        destination: theme://user-uploads
+        multiple: false
+        accept: image/*

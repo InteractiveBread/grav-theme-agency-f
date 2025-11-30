@@ -1,0 +1,29 @@
+title: Production
+'@extends':
+  type: default
+  context: blueprints://pages
+  
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+      
+      fields:
+        content:
+          fields:
+            
+            header.laurels:
+              type: list
+              label: Laurels
+              fields:
+                .title:
+                  type: text
+                  label: Title
+                  validate:
+                    required: true
+                .img:
+                  type: pagemediaselect
+                  label: Image
+                  validate:
+                    required: true

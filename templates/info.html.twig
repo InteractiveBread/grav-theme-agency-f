@@ -1,0 +1,20 @@
+{% extends 'partials/base.html.twig' %}
+{% block header_navigation %}{% endblock %}
+{% block content %}
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<a class="btn btn-default" href="{{ base_url }}"><i class="fa fa-arrow-left"></i> Zurück</a>
+				<h1>{{ page.header.title }}</h1>
+			</div>
+        </div>
+	    <div class="row">
+			<div class="col-lg-3"></div>
+			<div class="col-lg-6">
+				{{ page.content|raw }}
+			</div>
+			<div class="col-lg-3"></div>
+	    </div>
+    </div>
+{% endblock %}
+

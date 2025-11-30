@@ -1,0 +1,77 @@
+ <section id="portfolio" class="bg-light-gray">
+  <div class="container">
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            {{ content|raw }}
+        </div>
+    </div>
+    <div class="row">
+        {% for portfolio in page.header.portfolios %}
+            <div class="col-md-4 col-sm-6 portfolio-item">
+                <a href="#portfolio-{{ portfolio.project_url }}" class="portfolio-link" data-toggle="modal">
+                    <div class="portfolio-hover">
+                        <div class="portfolio-hover-content">
+                            <i class="fa fa-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img src="{{ page.media[portfolio.thumbnail].url }}" class="img-responsive" alt="">
+                </a>
+                <div class="portfolio-caption">
+                    <h4>{{ portfolio.title }}</h4>
+                    <p class="text-muted">{{ portfolio.subtitle }}, {{ portfolio.projectdate }}</p>
+                </div>
+            </div>
+
+        {% endfor %}
+    </div>
+</div>
+</section>
+
+
+ {% for portfolio in page.header.portfolios %}
+    <div class="portfolio-modal modal fade" id="portfolio-{{ portfolio.project_url }}" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>{{ portfolio.title }}</h2>
+                            <hr class="star-primary">
+                            <img src="{{ page.media[portfolio.img].url }}" class="img-responsive img-centered" alt="{{ portfolio.alt }}">
+                            {% if portfolio.img_source|default(null) %}
+	                            <p class="text-muted">
+									<i>Bild: {{ portfolio.img_source }}</i>
+								</p>
+                            {% endif %}
+                            <p>{{ portfolio.description }}</p>
+							<p>
+								Leistung: {{ portfolio.category }}
+								{% if portfolio.client|default(null) %}
+									<br>
+									Auftraggeber:
+                                    <strong>
+										<a href="{{ portfolio.client_url }}" target="_blank">{{ portfolio.client }}</a>
+                                    </strong>
+								{% endif %}
+							</p>
+                            {% if portfolio.project_page|default(null) %}
+									<a class="btn btn-default" href="produktion/{{ portfolio.project_url }}" title="Mehr zu {{ portfolio.title }}">
+										<i class="fa fa-circle-info"></i> Details
+									</a>
+							{% endif %}
+                            <button type="button" class="btn btn-default" data-dismiss="modal">
+								<i class="fa fa-xmark"></i> Schließen
+							</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endfor %}
