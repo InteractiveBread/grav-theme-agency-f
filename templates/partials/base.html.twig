@@ -27,9 +27,19 @@
   
   <link rel="icon" type="image/png" href="{{ url('theme://img/favicon.png') }}" />
   {% endblock %}
-
+	
+	<style>
+		:root {
+			--primary: {{ theme.colors.primary }};
+			--secondary: {{ theme.colors.secondary }};
+			--text: #333;
+		}
+	</style>
+	
   {% block stylesheets %}
-    {% do assets.addCss('theme://css-compiled/global.css',100) %}
+    {% do assets.addCss('theme://css/bootstrap.css',100) %}
+    {% do assets.addCss('theme://css/agency.css',100) %}
+    {% do assets.addCss('theme://css/agency-f.css',100) %}
     {% do assets.addCss('theme://css/custom.css',100) %}
     {% do assets.addCss('theme://css/fontawesome.min.css',100) %}
     {% do assets.addCss('theme://css/solid.min.css',100) %}

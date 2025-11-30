@@ -1,3 +1,11 @@
+# v0.1.1
+## 30-11-2025
+
+1. [](#improved)
+  - sass / scss removed
+    - sass-variables replaced with css-vars
+    - colors can now be defined in the theme config via blueprint
+
 # v0.1.0
 ## 30-11-2025
 

@@ -1,0 +1,21 @@
+/*@import "bootstrap.min";*/
+/*@import "agency";*/
+/* Logo in Navbar */
+a.navbar-brand img {
+  height: 6rem;
+}
+
+/* Laurel Gallery for production pages */
+.laurel-gallery {
+  padding: 5rem;
+}
+
+.laurel-gallery img {
+  height: 85px;
+  padding: 0.5rem;
+  /* Gives a blue tint to white images */
+  -webkit-filter: brightness(0.4) sepia(1) contrast(5) hue-rotate(-171deg);
+  filter: brightness(0.4) sepia(1) contrast(5) hue-rotate(-171deg);
+}
+
+/*# sourceMappingURL=global.css.map */

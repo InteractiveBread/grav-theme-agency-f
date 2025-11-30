@@ -10,11 +10,12 @@
 - [ ] Theme Blueprint
   - [ ] Opengraph meta tags
   - [ ] Favicons
-  - [ ] colors (dark mode?)
-- [ ] `languaes.yaml`
+  - [x] colors
+  - [ ] colors - dark mode
+- [ ] `languages.yaml`
 - [ ] demo content
 - [ ] screenshot + Thumbnail
 
 ## Ideas
 
-- maybe drop Sass
+- maybe drop Sass (global css file?)

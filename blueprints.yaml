@@ -47,11 +47,19 @@ form:
                 validate:
                   type: text
         
-            .accent:
+            .secondary:
                 type: colorpicker
                 size: medium
-                label: Accent
+                label: Secondary
                 default: '#2f81e7'
+                validate:
+                  type: text
+        
+            .text:
+                type: colorpicker
+                size: medium
+                label: Text
+                default: '#333333'
                 validate:
                   type: text
     
