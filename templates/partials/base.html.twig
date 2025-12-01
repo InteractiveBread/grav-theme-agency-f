@@ -6,26 +6,30 @@
   <title>{% if header.title %}{{ header.title }} | {% endif %}{{ site.title }}</title>
   {% include 'partials/metadata.html.twig' %}
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	  
+	  {% block opengraph %}
+		{% if theme.opengraph.title|default(null) %}
+			<meta property="og:title" content="{{ theme.opengraph.title }}">
+		{% endif %}
+		{% if theme.opengraph.description|default(null) %}
+			<meta property="og:description" content="{{ theme.opengraph.description }}">
+		{% endif %}
+		{% if theme.opengraph.type|default(null) %}
+			<meta property="og:type" content="{{ theme.opengraph.type }}">
+		{% endif %}
+		{% if theme.opengraph.url|default(null) %}
+			<meta property="og:url" content="{{ theme.opengraph.url }}">
+		{% endif %}
+		{% if theme.opengraph.image|default(null) %}
+			<meta property="og:image" content="{{ theme.opengraph.image }}">
+		{% endif %}
+	  {% endblock %}
   
-  {% block opengraph %}
-	{% if theme.opengraph.title|default(null) %}
-		<meta property="og:title" content="{{ theme.opengraph.title }}">
-	{% endif %}
-	{% if theme.opengraph.description|default(null) %}
-		<meta property="og:description" content="{{ theme.opengraph.description }}">
-	{% endif %}
-	{% if theme.opengraph.type|default(null) %}
-		<meta property="og:type" content="{{ theme.opengraph.type }}">
-	{% endif %}
-	{% if theme.opengraph.url|default(null) %}
-		<meta property="og:url" content="{{ theme.opengraph.url }}">
-	{% endif %}
-	{% if theme.opengraph.image|default(null) %}
-		<meta property="og:image" content="{{ theme.opengraph.image }}">
-	{% endif %}
-  {% endblock %}
-  
-  <link rel="icon" type="image/png" href="{{ url('theme://img/favicon.png') }}" />
+  {% if theme.icons.fav_vector|default(null) %}
+	<link rel="icon" type="image/svg+xml" href="{{ url('theme://user-uploads/icons/') }}/{{ theme.icons.fav_vector }}" />
+  {% else %}
+	<link rel="icon" type="image/png" href="{{ url('theme://img/favicon.png') }}" />
+  {% endif %}
   {% endblock %}
 	
 	<style>

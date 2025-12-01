@@ -1,3 +1,11 @@
+# v0.1.3
+## 01-12-2025
+
+1. [](#new)
+  - support for custom SVG-favicon
+2. [](#improved)
+  - automatic alignment of odd and even items in "about" section
+  
 # v0.1.2
 ## 01-12-2025
 

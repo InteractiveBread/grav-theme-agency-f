@@ -1,5 +1,5 @@
 name: Agency-F
-version: 0.1.2
+version: 0.1.3
 description: "Agency-F is a fork of Agency - a clean and professional one-page theme for **Grav**, aimed at film makers and production companies."
 icon: film
 author:
@@ -73,6 +73,12 @@ form:
         collapsible: true
         
         fields:
+    
+            .fav_vector:
+                type: filepicker
+                folder: theme://user-uploads/icons
+                label: Favicon (Vector)
+                preview_images: true
     
             .navbar_logo:
                 type: filepicker

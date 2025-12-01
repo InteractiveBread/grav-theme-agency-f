@@ -510,20 +510,20 @@ section h3 {
   line-height: 14px;
 }
 
-.timeline > li.timeline-inverted > .timeline-panel {
+.timeline > li:nth-child(even) > .timeline-panel {
   float: right;
   padding: 0 20px 0 100px;
   text-align: left;
 }
 
-.timeline > li.timeline-inverted > .timeline-panel:before {
+.timeline > li:nth-child(even) > .timeline-panel:before {
   right: auto;
   left: -15px;
   border-right-width: 15px;
   border-left-width: 0;
 }
 
-.timeline > li.timeline-inverted > .timeline-panel:after {
+.timeline > li:nth-child(even) > .timeline-panel:after {
   right: auto;
   left: -14px;
   border-right-width: 14px;
@@ -573,7 +573,7 @@ section h3 {
     font-size: 13px;
     line-height: 18px;
   }
-  .timeline > li.timeline-inverted > .timeline-panel {
+  .timeline > li:nth-child(even) > .timeline-panel {
     float: right;
     padding: 0 30px 20px 20px;
     text-align: left;
@@ -596,7 +596,7 @@ section h3 {
     font-size: 18px;
     line-height: 26px;
   }
-  .timeline > li.timeline-inverted > .timeline-panel {
+  .timeline > li:nth-child(even) > .timeline-panel {
     padding: 0 20px 20px;
   }
 }
@@ -615,7 +615,7 @@ section h3 {
   .timeline > li .timeline-image h4 {
     margin-top: 40px;
   }
-  .timeline > li.timeline-inverted > .timeline-panel {
+  .timeline > li:nth-child(even) > .timeline-panel {
     padding: 0 100px 20px 20px;
   }
 }

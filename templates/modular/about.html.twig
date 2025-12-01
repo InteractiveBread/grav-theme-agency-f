@@ -9,7 +9,7 @@
         <div class="col-lg-12">
             <ul class="timeline">
                 {% for about in page.header.abouts %}
-                    <li {% if about.align == 'inverted' %}class="timeline-inverted"{% endif %}>
+                    <li>
                         <div class="timeline-image">
                             {% if page.media[about.img] %}
                             <img class="img-circle img-responsive" src="{{ page.media[about.img].url }}" alt="">
@@ -23,7 +23,7 @@
                                 <h4 class="subheading">{{ about.subheading }}</h4>
                             </div>
                             <div class="timeline-body">
-                                <p class="text-muted">{{ about.body }}</p>
+                                <p class="text-muted">{{ about.body|raw }}</p>
                             </div>
                         </div>
                     </li>
