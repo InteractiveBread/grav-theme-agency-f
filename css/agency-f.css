@@ -1,5 +1,13 @@
-/*@import "bootstrap.min";*/
-/*@import "agency";*/
+:root {
+	--grid-item-width: 300px;
+}
+
+.grid-row {
+	display: grid;
+	grid-gap: 2rem;
+	grid-template-columns: repeat(auto-fit, minmax(var(--grid-item-width), 1fr));
+}
+
 /* Logo in Navbar */
 a.navbar-brand img {
   height: 6rem;
@@ -17,5 +25,3 @@ a.navbar-brand img {
   -webkit-filter: brightness(0.4) sepia(1) contrast(5) hue-rotate(-171deg);
   filter: brightness(0.4) sepia(1) contrast(5) hue-rotate(-171deg);
 }
-
-/*# sourceMappingURL=global.css.map */

@@ -5,9 +5,9 @@
             {{ content|raw }}
         </div>
     </div>
-    <div class="row">
+    <div class="grid-row">
         {% for portfolio in page.header.portfolios %}
-            <div class="col-md-4 col-sm-6 portfolio-item">
+            <div class="portfolio-item">
                 <a href="#portfolio-{{ portfolio.project_url }}" class="portfolio-link" data-toggle="modal">
                     <div class="portfolio-hover">
                         <div class="portfolio-hover-content">

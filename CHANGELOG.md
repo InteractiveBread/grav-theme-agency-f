@@ -1,3 +1,9 @@
+# v0.1.2
+## 01-12-2025
+
+1. [](#improved)
+  - changed Bootstrap columns in services / portfolio / team section to CSS-Grid to ensure proper layout of items with different heights
+
 # v0.1.1
 ## 30-11-2025
 

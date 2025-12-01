@@ -5,9 +5,9 @@
             {{ content|raw }}
         </div>
     </div>
-    <div class="row">
+    <div class="grid-row" style="--grid-item-width:200px;">
         {% for member in page.header.people %}
-            <div class="col-sm-3">
+            <div class="">
                 <div class="team-member">
                     <img src="{{ page.media[member.pic].url }}" class="img-responsive img-circle" alt="">
                     <h4>{{ member.name }}</h4>

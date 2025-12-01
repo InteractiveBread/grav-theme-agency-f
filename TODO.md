@@ -5,6 +5,7 @@
   - [x] header image
   - [ ] portfolio items
   - [x] laurels (production pages)
+  - [ ] OG tags (production pages)
   - [ ] team members
   - [ ] services
 - [ ] Theme Blueprint
