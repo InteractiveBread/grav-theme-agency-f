@@ -1,3 +1,10 @@
+# v0.1.4
+## 02-12-2025
+
+1. [](#improved)
+  - JS "back" button in info and production pages
+  - default images can be declared for portfolio items
+
 # v0.1.3
 ## 01-12-2025
 

@@ -14,7 +14,11 @@
                             <i class="fa fa-plus fa-3x"></i>
                         </div>
                     </div>
-                    <img src="{{ page.media[portfolio.thumbnail].url }}" class="img-responsive" alt="">
+                    {% if portfolio.thumbnail|default(null) %}
+						<img src="{{ page.media[portfolio.thumbnail].url }}" class="img-responsive" alt="">
+					{% else %}
+						<img  src="{{ page.media[page.header.default_thumbnail].url }}" class="img-responsive" alt="">
+					{% endif %}
                 </a>
                 <div class="portfolio-caption">
                     <h4>{{ portfolio.title }}</h4>
@@ -43,7 +47,11 @@
                         <div class="modal-body">
                             <h2>{{ portfolio.title }}</h2>
                             <hr class="star-primary">
-                            <img src="{{ page.media[portfolio.img].url }}" class="img-responsive img-centered" alt="{{ portfolio.alt }}">
+                            {% if portfolio.img|default(null) %}
+								<img src="{{ page.media[portfolio.img].url }}" class="img-responsive img-centered" alt="{{ portfolio.alt }}">
+							{% else %}
+								<img src="{{ page.media[page.header.default_image].url }}" class="img-responsive img-centered" alt="">
+							{% endif %}
                             {% if portfolio.img_source|default(null) %}
 	                            <p class="text-muted">
 									<i>Bild: {{ portfolio.img_source }}</i>
