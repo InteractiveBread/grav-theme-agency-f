@@ -13,6 +13,14 @@ a.navbar-brand img {
   height: 6rem;
 }
 
+/*
+#portfolio .portfolio-item:hover {
+	transition: all ease 0.3s;
+	scale: 1.02;
+	box-shadow: #0002 5px 5px 15px;
+}
+*/
+
 /* Laurel Gallery for production pages */
 .laurel-gallery {
   padding: 5rem;

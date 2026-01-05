@@ -1,5 +1,5 @@
 name: Agency-F
-version: 0.1.3
+version: 0.1.5
 description: "Agency-F is a fork of Agency - a clean and professional one-page theme for **Grav**, aimed at film makers and production companies."
 icon: film
 author:
@@ -16,25 +16,34 @@ dependencies:
 
 form:
   validation: loose
+  
   fields:
-    dropdown.enabled:
-        type: toggle
-        label: Dropdown in navbar
-        highlight: 1
-        default: 0
-        options:
-          1: Enabled
-          0: Disabled
-        validate:
-          type: bool
+  
+    settings:
+      type: fieldset
+      title: Settings
+      icon: gear
+      collapsed: true
+      collapsible: true
+      
+      fields:
+      
+        dropdown.enabled:
+          type: toggle
+          label: Dropdown in navbar
+          highlight: 1
+          default: 0
+          options:
+            1: Enabled
+            0: Disabled
+          validate:
+            type: bool
 
     colors:
         type: fieldset
         title: Colors
-        help: Help Text
-        info: Info Text
-        icon: paint-brush
-        collapsed: false
+        icon: palette
+        collapsed: true
         collapsible: true
         
         fields:
@@ -62,14 +71,84 @@ form:
                 default: '#333333'
                 validate:
                   type: text
+        
+            .text_muted:
+                type: colorpicker
+                size: medium
+                label: Text (muted)
+                default: '#777'
+                validate:
+                  type: text
+        
+            .bg:
+                type: colorpicker
+                size: medium
+                label: Background
+                default: '#fff'
+                validate:
+                  type: text
+        
+            .bg_accent:
+                type: colorpicker
+                size: medium
+                label: Background (accent)
+                default: '#f7f7f7'
+                validate:
+                  type: text
+        
+            .primary_dark:
+                type: colorpicker
+                size: medium
+                label: Primary (dark mode)
+                default: '#5190dd'
+                validate:
+                  type: text
+        
+            .secondary_dark:
+                type: colorpicker
+                size: medium
+                label: Secondary (dark mode)
+                default: '#2f81e7'
+                validate:
+                  type: text
+        
+            .text_dark:
+                type: colorpicker
+                size: medium
+                label: Text (dark mode)
+                default: '#333333'
+                validate:
+                  type: text
+        
+            .text_muted_dark:
+                type: colorpicker
+                size: medium
+                label: Text (muted)
+                default: '#aaa'
+                validate:
+                  type: text
+        
+            .bg_dark:
+                type: colorpicker
+                size: medium
+                label: Background
+                default: '#111'
+                validate:
+                  type: text
+        
+            .bg_accent_dark:
+                type: colorpicker
+                size: medium
+                label: Background (accent)
+                default: '#222'
+                validate:
+                  type: text
     
     icons:
         type: fieldset
         title: Icons
-        help: Help Text
-        info: Info Text
-        icon: user-circle
-        collapsed: false
+        icon: bookmark
+        collapsed: true
         collapsible: true
         
         fields:
@@ -96,8 +175,8 @@ form:
     opengraph:
         type: fieldset
         title: Open Graph
-        info: Meta Tags for Open Graph representation
-        collapsed: false
+        icon: hexagon-nodes
+        collapsed: true
         collapsible: true
         
         fields:
@@ -115,15 +194,8 @@ form:
                 type: text
                 label: OG URL
             .image:
-                type: filepicker
-                label: OG Image (1201x628)
-                folder: theme://user-uploads
-                preview_images: true
-    
-    user_uploads:
-        name: uploads
-        type: file
-        label: User Uploads (Images)
-        destination: theme://user-uploads
-        multiple: false
-        accept: image/*
+                type: file
+                multiple: false
+                label: "OG Image (1200 x 628 px)"
+                destination: theme://user-uploads/og
+                accept: image/*

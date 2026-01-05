@@ -36,7 +36,20 @@
 		:root {
 			--primary: {{ theme.colors.primary }};
 			--secondary: {{ theme.colors.secondary }};
-			--text: #333;
+			--text: {{ theme.colors.text }};
+			--text-muted: {{ theme.colors.text_muted }};
+			--bg: {{ theme.colors.bg }};
+			--bg-accent: {{ theme.colors.bg_accent }};
+		}
+		@media (prefers-color-scheme: dark) {
+			:root {
+				--primary: {{ theme.colors.primary_dark }};
+				--secondary: {{ theme.colors.secondary_dark }};
+				--text: {{ theme.colors.text_dark }};
+				--text-muted: {{ theme.colors.text_muted_dark }};
+				--bg: {{ theme.colors.bg_dark }};
+				--bg-accent: {{ theme.colors.bg_accent_dark }};
+			}
 		}
 	</style>
 	

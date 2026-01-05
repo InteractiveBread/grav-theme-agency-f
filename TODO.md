@@ -9,10 +9,12 @@
   - [ ] team members
   - [ ] services
 - [ ] Theme Blueprint
-  - [ ] Opengraph meta tags
+  - [x] Opengraph meta tags
   - [ ] Favicons
+    - [x] SVG
+    - others?
   - [x] colors
-  - [ ] colors - dark mode
+  - [x] colors - dark mode
 - [ ] `languages.yaml`
 - [ ] demo content
 - [ ] screenshot + Thumbnail
