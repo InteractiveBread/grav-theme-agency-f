@@ -1,3 +1,10 @@
+# v0.1.6
+## 19-01-2026
+
+1. [](#improved)
+  - German menu items
+  - some styling
+  
 # v0.1.5
 ## 02-12-2025
 

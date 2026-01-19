@@ -33,3 +33,9 @@ a.navbar-brand img {
   -webkit-filter: brightness(0.4) sepia(1) contrast(5) hue-rotate(-171deg);
   filter: brightness(0.4) sepia(1) contrast(5) hue-rotate(-171deg);
 }
+
+/* Client Logos */
+aside.clients img {
+	max-width: 200px;
+}
+ 

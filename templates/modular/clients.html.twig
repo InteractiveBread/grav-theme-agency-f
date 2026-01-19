@@ -5,9 +5,9 @@
 </div>
 <aside class="clients">
     <div class="container">
-        <div class="row">
+        <div class="grid-row" style="--grid-item-width:200px;">
             {% for client in page.header.clients %}
-                <div class="col-md-3 col-sm-6">
+                <div>
                     <a href="{{ client.url }}">
                         <img src="{{ page.media[client.logo].url }}" class="img-responsive img-centered" alt="">
                     </a>
