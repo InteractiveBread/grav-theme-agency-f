@@ -1,3 +1,12 @@
+# v0.1.7
+## 04-02-2026
+
+1. [](#improved)
+  - header for link section in production pages
+  - target="_blank" on footer links
+  - improved logos in client section
+  - contact form disabled (for now)
+  
 # v0.1.6
 ## 19-01-2026
 

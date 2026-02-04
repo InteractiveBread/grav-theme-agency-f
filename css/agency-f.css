@@ -30,12 +30,18 @@ a.navbar-brand img {
   height: 85px;
   padding: 0.5rem;
   /* Gives a blue tint to white images */
-  -webkit-filter: brightness(0.4) sepia(1) contrast(5) hue-rotate(-171deg);
-  filter: brightness(0.4) sepia(1) contrast(5) hue-rotate(-171deg);
+  -webkit-filter: brightness(0.4) sepia(1) contrast(3) hue-rotate(173deg);
+  filter: brightness(0.4) sepia(1) contrast(3) hue-rotate(173deg);
 }
 
 /* Client Logos */
 aside.clients img {
 	max-width: 200px;
+	max-height: 100px;
 }
- 
+@media (prefers-color-scheme: dark) {
+	/* inverted logos for dark mode (maybe go with brightness instead?) */
+	aside.clients img {
+		filter: invert(1);
+	}
+}

@@ -18,9 +18,11 @@
 			<div class="col-lg-3"></div>
 	    </div>
         </div>
+        {% if page.header.external_links %}
 	    <div class="row">
 			<div class="col-lg-3"></div>
 			<div class="col-lg-6 text-center">
+				<h4>Links</h4>
 				{% for link in page.header.external_links %}
 					<p>
 						<a href="{{ link.url }}" target="_blank">
@@ -33,6 +35,7 @@
 				{% endfor %}
 			</div>
 			<div class="col-lg-3"></div>
+		{% endif %}
 	    </div>
 	    <div class="row">
 			<div class="col-lg-12 text-center laurel-gallery">

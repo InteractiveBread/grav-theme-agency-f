@@ -21,4 +21,4 @@
 
 ## Ideas
 
-- maybe drop Sass (global css file?)
+- redo portfolio images (poster / frame + blurred background via CSS)
